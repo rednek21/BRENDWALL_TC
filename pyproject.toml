@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "brendwall-tc"
+version = "0.1.0"
+description = ""
+authors = ["rednek21 <egor.podustov@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.1.1"
+djangorestframework = "^3.15.2"
+django-environ = "^0.11.2"
+drf-spectacular = "^0.27.2"
+pytest = "^8.3.3"
+pytest-django = "^4.9.0"
+pytest-factoryboy = "^2.7.0"
+gunicorn = "^23.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_files:/app/static
+    env_file:
+      - .env
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_files:/app/static
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+
+volumes:
+  static_files:
